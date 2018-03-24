@@ -1,36 +1,232 @@
----
-layout: page
-description: "A petridish of blogposts and ramblings to be read with caution."
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hover.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet">
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+        const scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
+    
+</head>
+<body>
+   
+   <div id="particles-js"></div>
+   <div class="swirl"></div>
+   <div class="navbar">
+       <div class="logo">
+           <span class="logo-img">
+               <img src="./images/logo.png" alt="">
+           </span>
+           <span class="logo-text">
+               Tara Shankar
+           </span>
+       </div>
+       <ul class="navigation">
+           <li>
+               <a href="">About</a>
+               <a data-scroll href="#showcase">Projects</a>
+               <a href="http://tarashankar.me/blog">Blog</a>
+               <a href="" class="hi-bubble"><span>Say Hi!</span></a>
+               
+           </li>
+       </ul>
+   </div>
+   <div class="hero-text">
+       <h3>Hi.</h3>
+        <h4>I’m a web developer and designer from Kolkata, India.</h4>
+        <div class="button-round">
+            <a href="">Know More</a>
+        </div>
+   </div>
+   <div class="showcase" id="showcase">
+       <div class="showcase-text">
+           <div class="button-round "><a href="" onclick="return false" class="latest">Latest</a></div>
+       <h3>Real-time chat-app using Socket.IO</h3>
+       <ul class="more">
+           <li><a href="" class="shadow-link hvr-underline-from-right">read more</a></li>
+           <li><a href="" class="shadow-link hvr-underline-from-right">live demo</a></li>
+       </ul>
+       <ul class="tech">
+           <li>Node.js</li>
+           <li>Express</li>
+           <li>Socket.IO</li>
+       </ul>
+       </div>
+       <div class="showcase-picture">
+           <img src="./images/lappy.png" alt="">
+        </div>
+   </div>
+    <div class="project-header"> 
+        <h1>Projects</h1>
+    </div>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+    <div class='projects'>
+        
+        <div class="skewed"></div>
+        <div class="project-card chaibreak">
+            <div class="banner">
+
+            </div>
+            <h1>ChaiBreak</h1>
+            <p> A blogging platform built with Node.js</p>
+            <ul class="more more-projects">
+                <li>
+                    <a href="" class="shadow-link hvr-underline-from-right">read more
+                    <svg class="link-svg"><path d="M17.92,7.38a1,1,0,0,0-.22-1.09l-6-6a1,1,0,0,0-1.41,1.41L14.59,6H1A1,1,0,0,0,1,8H14.59l-4.29,4.29a1,1,0,1,0,1.41,1.41l6-6A1,1,0,0,0,17.92,7.38Z" class="icon-layer"></path></svg>
+                    </a>  
+                        
+                        
+                                        
+                </li>
+                <li><a href="http://www.chaibreak.club" class="shadow-link hvr-underline-from-right">live demo</a></li>
+            </ul>
+            <ul class="tech">
+           <li>Node.js</li>
+           <li>Express</li>
+           <li>Pug</li>
+            </ul>
+        </div>
+
+        <div class="project-card groop">
+            <div class="banner">
+
+            </div>
+            <h1>Groop</h1>
+            <p> A real time chatroom</p>
+            <ul class="more more-projects">
+                <li>
+                    <a href="" class="shadow-link hvr-underline-from-right">read more
+                    <svg class="link-svg"><path d="M17.92,7.38a1,1,0,0,0-.22-1.09l-6-6a1,1,0,0,0-1.41,1.41L14.59,6H1A1,1,0,0,0,1,8H14.59l-4.29,4.29a1,1,0,1,0,1.41,1.41l6-6A1,1,0,0,0,17.92,7.38Z" class="icon-layer"></path></svg>
+                    </a>  
+                        
+                        
+                                        
+                </li>
+                <li><a href="http://groopwebapp.herokuapp.com" class="shadow-link hvr-underline-from-right">live demo</a></li>
+            </ul>
+            <ul class="tech">
+           <li>Node.js</li>
+           <li>Socket.IO</li>
+           <li>Express</li>
+            </ul>
+        </div>
+
+        <div class="project-card chhotu">
+            <div class="banner">
+
+            </div>
+            <h1>Chhotu</h1>
+            <p> A sleek URL shortener</p>
+            <ul class="more more-projects">
+                <li>
+                    <a href="" class="shadow-link hvr-underline-from-right">read more
+                    <svg class="link-svg"><path d="M17.92,7.38a1,1,0,0,0-.22-1.09l-6-6a1,1,0,0,0-1.41,1.41L14.59,6H1A1,1,0,0,0,1,8H14.59l-4.29,4.29a1,1,0,1,0,1.41,1.41l6-6A1,1,0,0,0,17.92,7.38Z" class="icon-layer"></path></svg>
+                    </a>  
+                        
+                        
+                                        
+                </li>
+                <li><a href="http://www.chhotu.org" class="shadow-link hvr-underline-from-right">live demo</a></li>
+            </ul>
+            <ul class="tech">
+           <li>Node.js</li>
+           <li>Pug</li>
+           <li>Passport</li>
+            </ul>
+        </div>
+
+        <div class="project-card hitk">
+            <div class="banner">
+
+            </div>
+            <h1>LIFE @ RC-HITK</h1>
+            <p> A club-management site for Rotaract Club of HITK</p>
+            <ul class="more more-projects">
+                <li>
+                    <a href="" class="shadow-link hvr-underline-from-right">read more
+                    <svg class="link-svg"><path d="M17.92,7.38a1,1,0,0,0-.22-1.09l-6-6a1,1,0,0,0-1.41,1.41L14.59,6H1A1,1,0,0,0,1,8H14.59l-4.29,4.29a1,1,0,1,0,1.41,1.41l6-6A1,1,0,0,0,17.92,7.38Z" class="icon-layer"></path></svg>
+                    </a>  
+                        
+                        
+                                        
+                </li>
+                <li><a href="" class="shadow-link hvr-underline-from-right">live demo</a></li>
+            </ul>
+            <ul class="tech">
+           <li>Node.js</li>
+           <li>React</li>
+           <li>Express</li>
+            </ul>
+        </div>
+
+        
+    </div>
+        <div class="email-form">
+            <form action="" class="email">
+                <h1>Want to build beautiful products?</h1>
+                <input type="text" class='input-name' placeholder='Your Name'>
+                <input type="email" class='input-mail' placeholder="Your Email">
+                <button type='submit' value='submit'>Get in touch</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <h1 class="email-text">tarashanr321@gmail.com</h1>
+                <div class="link">
+                    <p>About</p>
+                    <p>
+                        <a href="http://tarashankar.me/blog">Blog</a>
+                    </p>
+                    <p>
+                        <a data-scroll href="#showcase">Projects</a>
+                    </p>
+                </div>
+                <div class="social">
+                    <div class="facebook"><img src="./images/facebook.svg" alt="">
+                            </div>
+                    
+                    <div class="insta"><img src="./images/instagram-logo.svg" alt="">
+                            </div>
+                    </div>
+                    </div>
+                <div class="hr">
+                    
+                </div>
+                <div class="footer-desc">
+                    <p>Made with <del>Love</del> Keyboard in Kolkata</p>
+                </div>
+            </div>
+        
+    
+    
+    
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+</body>
+    <script src="./particles.js"></script>
+    <script>
+    
+        
+        particlesJS.load('particles-js', './asset/particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    
+    </script>
+
+
+</html>
